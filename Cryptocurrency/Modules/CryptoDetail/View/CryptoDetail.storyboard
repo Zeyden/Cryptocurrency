@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LoV-oE-FZv">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Crypto Detail View Controller-->
+        <scene sceneID="Vwb-iL-f73">
+            <objects>
+                <viewController id="LoV-oE-FZv" customClass="CryptoDetailViewController" customModule="Cryptocurrency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LVf-sg-m9l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3B-XK-mcL" customClass="BgGradientView" customModule="Cryptocurrency" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nao-j6-xin">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CryptoDetailTableCell" textLabel="Jxe-om-QII" detailTextLabel="TDE-ZJ-sPv" style="IBUITableViewCellStyleValue1" id="AhX-9U-Dpk">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AhX-9U-Dpk" id="kgl-uK-f3T">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jxe-om-QII">
+                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TDE-ZJ-sPv">
+                                                    <rect key="frame" x="261" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LoV-oE-FZv" id="CDL-mW-2eK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G3B-XK-mcL" firstAttribute="top" secondItem="LVf-sg-m9l" secondAttribute="top" id="0Kf-TR-aAu"/>
+                            <constraint firstItem="G3B-XK-mcL" firstAttribute="leading" secondItem="dYJ-or-cwg" secondAttribute="leading" id="7h1-Vq-VMQ"/>
+                            <constraint firstItem="dYJ-or-cwg" firstAttribute="bottom" secondItem="nao-j6-xin" secondAttribute="bottom" id="AXZ-fc-cDv"/>
+                            <constraint firstItem="G3B-XK-mcL" firstAttribute="trailing" secondItem="dYJ-or-cwg" secondAttribute="trailing" id="KPB-hI-joC"/>
+                            <constraint firstItem="dYJ-or-cwg" firstAttribute="trailing" secondItem="nao-j6-xin" secondAttribute="trailing" id="Ts0-6Y-LM7"/>
+                            <constraint firstItem="nao-j6-xin" firstAttribute="leading" secondItem="dYJ-or-cwg" secondAttribute="leading" id="XIs-Ke-mw4"/>
+                            <constraint firstItem="G3B-XK-mcL" firstAttribute="bottom" secondItem="dYJ-or-cwg" secondAttribute="bottom" id="fJg-E4-Tkv"/>
+                            <constraint firstItem="nao-j6-xin" firstAttribute="top" secondItem="dYJ-or-cwg" secondAttribute="top" id="uXn-CR-78U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dYJ-or-cwg"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="G3B-XK-mcL" id="wWx-3e-0Ye"/>
+                        <outlet property="tableView" destination="nao-j6-xin" id="NI8-qh-xSR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRl-7t-pi3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="9RF-Bt-X0h" customClass="CryptoDetailInitializer" customModule="Cryptocurrency" customModuleProvider="target">
+                    <connections>
+                        <outlet property="cryptoDetailViewController" destination="LoV-oE-FZv" id="CgA-Nc-cBD"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="204.375" y="235.56338028169014"/>
+        </scene>
+    </scenes>
+</document>
